@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Detail</title>
+  <style>
+  #radhekanha{
+   background-color: rgb((203), 207, 198);
+  }
+    .order{
+      display: flex;
+    
+    }
+    .block{
+      flex-direction: row;
+      
+    }
+    #xyz{
+      background-color: white;
+       content="width=device-width, initial-scale=1";
+       float: left;
+      
+      width:350px;
+      margin-left:5px;
+      shape-outside: ellipse(10% 10%);
+      clip-path: ellipse(80% 60%);
+      background: white;
+    
+  height: 760px;
+    }
+    #row
+    {
+      box-sizing: border-box;
+       border: solid 3px green;
+       padding: 8px;
+    }
+  </style>
+</head>
+
+<body id="radhekanha">
+  <div id="xyz" content="width=device-width, initial-scale=1";>
+    <div style="padding: 8px; padding-bottom: 5px;" content="width=device-width, initial-scale=1";>
+      
+    
+    <form>
+      <div content="width=device-width, initial-scale=1"; id="head">
+        <h2 style="text-align: center;">Fill details to place order</h2>
+      </div>
+      <div id="row">
+      <div>
+        <div content="width=device-width, initial-scale=1"; class="order">
+          <div content="width=device-width, initial-scale=1";>
+          <label for="">Choose</label>
+          
+          <div content="width=device-width, initial-scale=1";class="block">
+            <select id="profession">
+              <option value="Select">Select</option>
+              <option value="Faculty">Faculty</option>
+              <option value="Student">Student</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          </div>
+          <div content="width=device-width, initial-scale=1"; class="order">
+            <div style="margin-left: 100px;">
+          <label for="Area">Area</label>
+          <div class="block">
+           <select id="area">
+             <option value="Select">Select</option>
+             <option value="Akbarpur">Akbarpur</option>
+             <option value="Chaumuhan">Chaumuhan</option>
+             <option value="Chhata">Chhata</option>
+             <option value="Other">Other</option>
+           </select>
+          </div>
+            </div>
+        </div>
+      </div>
+      </br>
+      <div class="order">
+        <div>
+          <label for=""><i style="color: red;">*</i>Enter your Name</label>
+          <div class="block">
+            <input style="height: 30px; width: 254px;" type="text" id="name" placeholder="Enter Your Name">
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div>
+          <label for=""><i style="color: red">*</i>Address</label>
+          <div class="block">
+            <input id="address" placeholder="Exact address to deliver order" style="height: 30px; width: 254px;" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div>
+          <label for=""><i style="color: red;">*</i>Mobile Number</label>
+          <div class="block">
+            <input placeholder="Enter Mobile Number" id="phone" style="height:30px; width: 254px;"  type="number">
+          </div>
+        </div>
+      </div>
+      <div class="order">
+        <div>
+          <label for="">College</label>
+          <br>
+          <div class="block">
+            <select style="width: 260px; height: 35px;" id="college">
+              <option value="Select">Select</option>
+              <option value="G L Bajaj Group of Institutions">G L Bajaj Group of Institutions</option>
+              <option value="Sanskriti University">Sanskriti University</option>
+              <option value="K.D Medical College">K.D Medical College</option>
+              <option value="I.V.S College">I.V.S College</option>
+              <option value="SKS Medicity">SKS Medicity</option>
+              <option value="GLA University">GLA University</option>
+              <option value="Other">Other</option>
+              
+            </select>
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="order">
+        <div>
+          <label for="">Course....<b>😉</b></label>
+          <div class="block">
+            <input id="course" placeholder="Enter Your Course if Student " style="height: 30px; width: 254px;" type="text">
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="order">
+        <div>
+          <label for=""><i style="color: red;">*</i>Mode Of Payment</label>
+          <div class="block">
+            <select style="height: 35px; width: 260px;" id="payment">
+              <option value="Select">Select</option>
+              <option value="Online">Online</option>
+              <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <div class="order">
+        <button style="color: green;" onclick="whatsapp();" type="button">Submit on Whatsapp</button>
+      </div>
+  </div>
+    </form>
+    </div>
+  </div>
+  <script>
+       function whatsapp()
+       {
+         var Name=document.getElementById("name").value;
+         var Area=document.getElementById("area").value;
+         var Address=document.getElementById("address").value;
+         var Phone=document.getElementById("phone").value;
+         var Prof=document.getElementById("profession").value;
+         var College=document.getElementById("college").value;
+         var Course=document.getElementById("course").value;
+         var Payment=document.getElementById("payment").value;
+         var url="https://wa.me/+918112307505?text="
+         +Prof+"%0a"
+         +"*Name :* "+Name+"%0a"
+         +"*Phone number :* "+Phone+"%0a"
+         +"*Area :* "+Area+"%0a"
+         +"*Address :* "+Address+"%0a"
+         +"*College :* "+College+"%0a"
+         +"*Course :* "+Course+"%0a"
+         +"*Mode of Payment :* "+Payment+"%0a";
+         if(Name=="")
+         alert("Enter Name to proceed furthur");
+         else if(Address=="")
+         alert("Please Enter your Address");
+         else if(Phone=="")
+         alert("Enter mobile number");
+         else if(Payment=="Select")
+         alert("Please select mode of payment");
+         
+         
+         else
+        window.open(url,'_blank').focus();
+        
+         
+         
+       }
+     </script>
+
+</body>
+
+</html>
